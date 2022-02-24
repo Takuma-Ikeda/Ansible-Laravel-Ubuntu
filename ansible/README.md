@@ -46,7 +46,7 @@ ansible-playbook -i hosts playbook/pb_middleware.yml -v
 sudo mysql_secure_installation
 
 # MySQL 初期化
-# 先ほど変更した root パスワード、および作成する DB 名を ansible/roles/mysql/vars/main.yml に反映する
+# 先ほど変更した root パスワード、および作成する DB 名でえ ansible/roles/mysql/vars/main.yml を修正する
 ansible-playbook -i hosts playbook/pb_mysql.yml -v
 
 # SSH して手動で git clone 実行
