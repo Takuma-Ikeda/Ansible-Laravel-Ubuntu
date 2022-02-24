@@ -4,11 +4,11 @@
   mysql_db: name={{ mysql_database }} state=present
 
 # host の % 指定によって DB アクセスをフルオープンにする
-- name: create root user
+- name: create user for %
   mysql_user: name={{ mysql_user }} host=% password={{ mysql_password }} priv={{ mysql_database }}.*:ALL,GRANT state=present
 
-# host が localhost のとき plugin を mysql_native_password に変更しておく
-- name: create root user
+# host が localhost のとき plugin を mysql_native_password に変更する
+- name: create user for localhost
   mysql_user: name={{ mysql_user }} host=localhost password={{ mysql_password }} priv={{ mysql_database }}.*:ALL,GRANT state=present
 
 # bind-address = 127.0.0.1 をコメントアウトして、すべての IP アクセスから DB アクセス許可
