@@ -1,0 +1,7 @@
+---
+- name: common setting
+  hosts: all
+  become: True
+  roles:
+    - roles/common/timezone
+    - roles/common/ssh-keygen
