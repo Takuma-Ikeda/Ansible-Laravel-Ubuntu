@@ -49,7 +49,7 @@ sudo mysql_secure_installation
 # 先ほど変更した root パスワード、および作成する DB 名で ansible/roles/mysql/vars/main.yml を修正する
 ansible-playbook -i hosts playbook/pb_mysql.yml -v
 
-# SSH して手動で git clone 実行
+# SSH して手動で git clone 実行。Laravel アプリを配置する
 cd /var/www
 git clone リポジトリ
 cd プロジェクト
